@@ -1,11 +1,16 @@
 <h3 align="center">Section Content</h3>
 <p align="center">
-  | <a href="#-callback-functions">Callback Functions</a> | 
-  <a href="#-standard-observer-">Standard Observer</a> | 
-  <a href="#-closures">Closures</a> | 
-  <a href="#-factory-functions">Factory Functions</a> | 
+  <a href="#-callback-functions">Callback Functions</a> ● 
+  <a href="#-standard-observer-">Standard Observer</a> ● 
+  <a href="#-closures">Closures</a> ● 
+  <a href="#-factory-functions">Factory Functions</a> ●
+  <a href="#-class-x-factory-function">Class x Factory</a> ● 
+  <a href="#-constructor-function-challenge">Constructor Function Challenge</a> ●
+  <a href="#-iife">IIFE</a> ●
+  <a href="#-call-&-apply">Call & Apply</a>
 </p>
 
+---
 # 🤔 Callback Functions
 
 Basically, callback is passing a function to another function and when an event 
@@ -48,9 +53,11 @@ const lowGrades2 = grades.filter(grade => grade < 7);
 console.log(lowGrades2);
 ```
 
-### 👀 Standard Observer - The most used project standard ?!
+### 👀 Standard Observer
 
-#### 😕 Why Observer?
+The most used project standard ?!
+
+#### 😕 But why Observer?
 1. Javascript is based on Observer. 
 2. Web is based on Javascript. 
 3. Then web is extremely important.
@@ -60,6 +67,7 @@ It's a surviving rule.
 In Javascript observer is usually called Event Handler. In Java, is called 
 Listener but stills the same standard. Callback function uses observer.
 
+---
 # ❓ Closures
 
 It's the scope created when a function is declared. This scope allows the function access and manipulate variables external to the function.
@@ -79,8 +87,7 @@ const myFunction = out();
 console.log(myFunction); //returns 'Local'
 ```
 
-
-
+---
 # 🏭 Factory Functions
 
 Factory is a function that always returns a new object.
@@ -108,6 +115,7 @@ function createProduct(name, price) {
 console.log(createProduct('Notebook', 1999.00));
 ```
 
+---
 # 👊🏽 Class x Factory Function
 
 The usage of this two depends on for what exactly you're using this function. 
@@ -140,7 +148,23 @@ const p2 = createPerson('Lohana');
 p2.talk();  
 ```
 
+---
 # 🏅 Constructor Function Challenge
 
 See the "constructor-function-challenge.js" for the results.
 
+---
+# IIFE
+
+Translated as 'Immediately Invoked Function Expression', those are functions that self-invoke at the time they're declared. 
+
+An example on where/when they can be used is in browsers when you want to escapes the Global scope.
+
+How to declare:
+```js
+(function(){
+  console.log('It will be executed at the time!');
+  console.log('It escapes the broader scope.');
+})()
+```
+---
