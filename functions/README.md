@@ -1,7 +1,7 @@
 <h3 align="center">Section Content</h3>
 <p align="center">
   <a href="#-callback-functions">Callback Functions</a> ● 
-  <a href="#-standard-observer-">Standard Observer</a> ● 
+  <a href="#-standard-observer">Standard Observer</a> ● 
   <a href="#-closures">Closures</a> ● 
   <a href="#-factory-functions">Factory Functions</a> ●
   <a href="#-class-x-factory-function">Class x Factory</a> ● 
@@ -168,3 +168,33 @@ How to declare:
 })()
 ```
 ---
+# 🤙🏽 Call & Apply
+
+These are two other ways to invoke a function. They allow you to say the exact context you want that function to be in.
+
+The main difference between them is the way the parameters are passed when using these methods.
+
+Example:
+```js
+function getPrice(tax = 0, currency= 'R$') {
+  return `${currency} ${this.price * (1 - this.discount) * (1 + tax)}`;
+}
+
+const product = {
+  name: 'Notebook', 
+  price: '1999',
+  discount: 0.15,
+  getPrice,
+}
+
+console.log(product.getPrice());
+
+//Call and Apply
+const car = { price: 5000, discount: 0.20 };
+console.log(getPrice.call(car));
+console.log(getPrice.apply(car));
+
+// Parameters
+console.log(getPrice.call(car, 0.17, '$'));
+console.log(getPrice.apply(car, [0.17, '$']));
+```

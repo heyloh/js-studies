@@ -13,4 +13,6 @@ I'm also challenging myself to write everything in english here, sorry if there 
 - [x] Factory x Class
 - [x] Constructor Function Challenge
 - [x] IIFE
-- [ ] Call and Apply
+- [x] Call and Apply
+
+## OOP in JS
