@@ -3,6 +3,7 @@
 <p align="center">
   <a href="#-introduction-to-oo">Introduction to OO</a> ●
   <a href="#-objects-revision">Objects Revision</a> ● 
+  <a href="#-object-creation-strategies">Object Creation Strategies</a> ● 
 </p>
 
 ---
@@ -67,4 +68,74 @@ car.owner.address.number = 1000; // access with dot notation
 // same with brackets
 
 delete car.conductors; // deleting
+```
+
+# 🌱 Object Creation Strategies
+
+Using the literal notation for object creation.
+```js
+const obj1 = {};
+console.log(obj1);
+```
+
+<br>
+
+Using the Object function of JS.
+```js
+const obj2 = new Object;
+console.log(obj2);
+```
+
+<br>
+
+Creating your own constructor function.
+```js
+function Product(name, price, discount) {
+  this.name = name;
+  // price and discount are encapsulated
+  this.getPriceWithDiscount = () => {
+    return price * (1 - discount);
+  };
+}
+
+const p1 = new Product('Pen', 7.99, 0.15);
+const p2 = new Product('Notebook', 2998.99, 0.25);
+console.log(p1.getPriceWithDiscount(), p2.getPriceWithDiscount());
+```
+
+<br>
+
+Using Factory functions.
+```js
+function createEmployee(name, baseSalary, absenceCount) {
+  return {
+    name,
+    baseSalary,
+    absenceCount,
+    getSalary() {
+      return (baseSalary / 30) * (30 - absenceCount);
+    }
+  }
+}
+
+const f1 = createEmployee('Lohana', 5000, 4);
+const f2 = createEmployee('Zoe', 11000, 1);
+console.log(f1.getSalary(), f2.getSalary());
+```
+
+<br>
+
+Using Object.create notaion.
+```js
+const daughter = Object.create(null);
+daughter.name = 'Zoe';
+console.log(daughter);
+```
+
+<br>
+
+Using JSON.parse, a famous function that returns an Object.
+```js
+const fromJSON = JSON.parse('{"Info": "I am Jason"}');
+console.log(fromJSON.info);
 ```
