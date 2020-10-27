@@ -27,7 +27,7 @@ function print(name, index) {
 //callback
 
 manufacturers.forEach(print);
-manufacturers.forEach(fabricante => console.log(fabricante));
+manufacturers.forEach(manufacturer => console.log(manufacturer));
 ```
 
 Example 2:
