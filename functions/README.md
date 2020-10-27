@@ -7,7 +7,7 @@
   <a href="#-class-x-factory-function">Class x Factory</a> ● 
   <a href="#-constructor-function-challenge">Constructor Function Challenge</a> ●
   <a href="#-iife">IIFE</a> ●
-  <a href="#-call-&-apply">Call & Apply</a>
+  <a href="#-call-and-apply">Call & Apply</a>
 </p>
 
 ---
@@ -168,7 +168,7 @@ How to declare:
 })()
 ```
 ---
-# 🤙🏽 Call & Apply
+# 🤙🏽 Call and Apply
 
 These are two other ways to invoke a function. They allow you to say the exact context you want that function to be in.
 
