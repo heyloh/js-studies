@@ -1,4 +1,4 @@
-<h3 align="center">Section Content</h3>
+<h3 align="center">Module Content</h3>
 <p align="center">
   <a href="#-callback-functions">Callback Functions</a> ● 
   <a href="#-standard-observer">Standard Observer</a> ● 
