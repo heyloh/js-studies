@@ -18,7 +18,7 @@ I'm also challenging myself to write everything in english here, sorry if there 
 ---
 ## OOP in JS
 - [x] Introduction to OO
-- [ ] Object Revision
+- [x] Object Revision
 - [ ] Object Creation Strategies
 - [ ] Constants Objects
 - [ ] Literal Notation

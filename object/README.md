@@ -1,7 +1,8 @@
 <h3 align="center">Module Content</h3>
 
 <p align="center">
-  <a href="#-introduction-to-oo">Introduction to OO</a> ● 
+  <a href="#-introduction-to-oo">Introduction to OO</a> ●
+  <a href="#-objects-revision">Objects Revision</a> ● 
 </p>
 
 ---
@@ -19,3 +20,51 @@ The idea is to see the world based on objects and bring it in a simple way to th
 4. <strong>Polymorphism</strong> - Have multiple shapes declaring on generic object a specialized instance. Like instantiating a Dog class in an Animal object.
 
 ---
+# 📖 Objects Revision
+
+<strong>Object</strong> is a dynamically collection of key/value pairs.
+
+Example 1:
+```js
+const product = new Object;
+product.name = 'Chair'; // Defining name value
+product['Product Brand'] = 'Generic'; // Defining brand value
+product.price = 220;
+console.log(product);
+
+// delete attributes
+delete product.price;
+delete product['Product Brand'];
+console.log(product);
+```
+
+Example 2:
+```js
+const car = {
+  model: 'A4',
+  value: 89000,
+  owner: {
+    name: 'Lohana',
+    age: 19,
+    address: {
+      street: 'Rua de Xangô',
+      number: 153,
+    }
+  },
+  conductors: [{
+    name: 'Zoe',
+    age: 30,
+  }, {
+    name: 'Armin',
+    age: 21,
+  }],
+  calculateInsuranceValue: function() {
+    // ...
+  },
+}
+
+car.owner.address.number = 1000; // access with dot notation
+// same with brackets
+
+delete car.conductors; // deleting
+```
