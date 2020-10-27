@@ -8,7 +8,7 @@ I've been on an Udemy course about modern web development with Javascript and I 
 I'm also challenging myself to write everything in english here, sorry if there are grammatical mistakes I'm not the best on it... Yet. 😉
 
 ---
-## Functions
+## Functions ✅
 - [x] Closures
 - [x] Factory Function
 - [x] Factory x Class
