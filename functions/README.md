@@ -154,7 +154,7 @@ p2.talk();
 See the "constructor-function-challenge.js" for the results.
 
 ---
-# IIFE
+# 🤨 IIFE
 
 Translated as 'Immediately Invoked Function Expression', those are functions that self-invoke at the time they're declared. 
 
