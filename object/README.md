@@ -126,7 +126,7 @@ console.log(f1.getSalary(), f2.getSalary());
 
 <br>
 
-Using Object.create notaion.
+Using Object.create notation.
 ```js
 const daughter = Object.create(null);
 daughter.name = 'Zoe';
