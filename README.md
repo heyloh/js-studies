@@ -21,7 +21,7 @@ I'm also challenging myself to write everything in english here, sorry if there 
 - [x] Object Revision
 - [x] Object Creation Strategies
 - [x] Constant Objects
-- [ ] Literal Notation
+- [x] Literal Notation
 - [ ] Getters/Setters
 - [ ] Important Object Functions 
 - [ ] Heritage

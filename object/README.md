@@ -174,3 +174,42 @@ Declaring from the beginning:
 ```js
 const constantPerson = Object.freeze({ name: 'Lohana' });
 ```
+# 🤔 Literal Notation
+
+<i>Haven't we talked about that before?</i> 🤔
+Yes we did, but there were a few updates and fixes for Literal Notation, so let's take a look!
+
+```js
+const a = 1;
+const b = 2;
+const c = 3;
+```
+<br>
+
+We have this three constants and we want to assign their values to attributes in an object. Before the JavaScript ES6, we had to do like this:
+```js
+const obj1 = { a:a, b:b, c:c };
+```
+<br>
+
+Now, with JavaScript ES6, we can simply do like this:
+```js
+const obj2 = { a, b, c };
+```
+By default, those attributes will get the same name as the constants assigned to them.
+
+#### Same happens with Functions:
+
+Before ES6:
+```js
+const obj5 = {
+  function1: function() { return },
+};
+```
+
+Now, with ES6: 
+```js
+const obj5 = {
+  function1() { return },
+};
+```
