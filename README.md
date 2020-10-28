@@ -1,4 +1,4 @@
-# 🚀 Mastering JavaScript 
+# 🏆 Mastering JavaScript 
 ### This is a Javascript studies purpose repository. 📚
 
 I've been on an Udemy course about modern web development with Javascript and I plan to bring here everything I'll be learning there.
