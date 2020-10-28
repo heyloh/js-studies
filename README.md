@@ -20,7 +20,7 @@ I'm also challenging myself to write everything in english here, sorry if there 
 - [x] Introduction to OO
 - [x] Object Revision
 - [x] Object Creation Strategies
-- [ ] Constants Objects
+- [x] Constant Objects
 - [ ] Literal Notation
 - [ ] Getters/Setters
 - [ ] Important Object Functions 

@@ -4,6 +4,7 @@
   <a href="#-introduction-to-oo">Introduction to OO</a> ●
   <a href="#-objects-revision">Objects Revision</a> ● 
   <a href="#-object-creation-strategies">Object Creation Strategies</a> ● 
+  <a href="#-constant-objects">Constant Objects</a> ●  
 </p>
 
 ---
@@ -69,7 +70,7 @@ car.owner.address.number = 1000; // access with dot notation
 
 delete car.conductors; // deleting
 ```
-
+---
 # 🌱 Object Creation Strategies
 
 Using the literal notation for object creation.
@@ -138,4 +139,38 @@ Using JSON.parse, a famous function that returns an Object.
 ```js
 const fromJSON = JSON.parse('{"Info": "I am Jason"}');
 console.log(fromJSON.info);
+```
+
+---
+# 🧐 Constant Objects
+
+This topic starts because of a question: Why you assign an Object to a constant but keeps altering its values along the code.
+```js
+const person = { name: 'Lohana' };
+person.name = 'Loh';
+```
+<strong>Explaining</strong>: The constant is storing a reference to an address on memory that the Object is stored. When you alter a value, like shown in the example above, you aren't altering the reference, but the content of this reference. You can't change the reference because it's a constant, but you can do like the example and it's okay.
+
+#### ⚠ What you can't do:
+```js
+person = { name: 'Zoe' };
+```
+That's the wrong way, cause you're trying to change the reference. You're telling a constant to start looking for a new Object instead of altering the values of the existing one who the constant already references. You're trying to re-assign the value of that constant!!!
+
+<br>
+
+<strong>What if I want to lock my Object from suffering alterations? </strong>
+
+Just use the Object.freeze method!
+```js
+Object.freeze(person);
+person.name = 'John'; // not gonna work!
+person.address = 'Rua de Xangô'; // nope!
+delete person.name; // nothing...Give up fren!
+```
+With that done, nobody can: alter an existing attribute, add a new attribute or delete any attributes. Now you've a constant object! 😁
+
+Declaring from the beginning: 
+```js
+const constantPerson = Object.freeze({ name: 'Lohana' });
 ```
