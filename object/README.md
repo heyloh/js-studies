@@ -1,4 +1,4 @@
-<!-- <h3 align="center">Module Content</h3>
+<h3 align="center">Module Content</h3>
 
 <p align="center">
   <a href="#-introduction-to-oo">Introduction to OO</a> ●
@@ -8,19 +8,7 @@
   <a href="#-getters/setters">Getters/Setters</a> ●  
   <a href="#-important-object-functions">Important Object Functions</a> ●  
 </p>
- -->
- 
- ---
-<h3 align="center">Module Content</h3>
-<!--ts-->
-   * [Introduction to OO](#-introduction-to-oo)
-   * [Objects Revision](#-objects-revision)
-   * [Instalação](#instalacao)
-   * [Object Creation Strategies](#-object-creation-strategies)
-   * [Constant Objects](#-constant-objects)
-   * [Getters/Setters](#-getters/setters)
-   * [Important Object Functions](#-important-object-functions)
-<!--te-->
+
 
 ---
 # 🏁 Introduction to OO
