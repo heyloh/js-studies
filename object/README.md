@@ -5,8 +5,8 @@
   <a href="#-objects-revision">Objects Revision</a> ● 
   <a href="#-object-creation-strategies">Object Creation Strategies</a> ● 
   <a href="#-constant-objects">Constant Objects</a> ●  
-  <a href="#-getters/setters">Getters/Setters</a> ●  
-  <a href="#-important-object-functions">Important Object Functions</a> ●  
+  <a href="#-getters-and-setters">Getters and Setters</a> ●  
+  <!-- <a href="#-important-object-functions">Important Object Functions</a> ●   -->
 </p>
 
 
@@ -217,7 +217,7 @@ const obj5 = {
 };
 ```
 ---
-# 🔒 Getters/Setters
+# 🔒 Getters and Setters
 
 We've already talk about the principles of Object-Oriented Programming, and one of those principles is the Encapsulation. A way of encapsulating the attributes is turning them privates and having methods for reading and altering those attributes in a controlled manner.
 
@@ -252,5 +252,5 @@ console.log(sequence.value); // call get method for reading
 ```
 Just follow the dance! 🥳
 
----
-# Important Object Functions
+<!-- ---
+# Important Object Functions -->
