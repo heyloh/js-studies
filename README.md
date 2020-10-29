@@ -22,7 +22,7 @@ I'm also challenging myself to write everything in english here, sorry if there 
 - [x] Object Creation Strategies
 - [x] Constant Objects
 - [x] Literal Notation
-- [ ] Getters/Setters
+- [x] Getters/Setters
 - [ ] Important Object Functions 
 - [ ] Heritage
 - [ ] Avoiding Modifications 

@@ -5,6 +5,7 @@
   <a href="#-objects-revision">Objects Revision</a> ● 
   <a href="#-object-creation-strategies">Object Creation Strategies</a> ● 
   <a href="#-constant-objects">Constant Objects</a> ●  
+  <a href="#-getters/setters">Getters/Setters</a> ●  
 </p>
 
 ---
@@ -213,3 +214,40 @@ const obj5 = {
   function1() { return },
 };
 ```
+---
+# 🔒 Getters/Setters
+
+We've already talk about the principles of Object-Oriented Programming, and one of those principles is the Encapsulation. A way of encapsulating the attributes is turning them privates and having methods for reading and altering those attributes in a controlled manner.
+
+When you alter a attribute directly you can't prevent inconsistent data being passed to those attributes. So, to prevent that, we use the Getters and Setters methods. Get is used for reading the attribute's values and Set, like the name suggests, to define or modify the attribute's value.
+
+In JavaScript, different from other Languages, we work directly with the attributes, but we also have a convension: When you have a variable starting with a underline(_) it's a message to developers, means it should only be accessed internally. It's not an obligation, but very recommended.
+
+```js
+  const sequence = { 
+    _value: 1, // convension
+    /* Get, like said before, is used to read, the pros of using this method is be allowed to make a validation */
+    get value() { return this_value++ },
+    set value(value) {
+      if (value > this._value) { // validation
+        this._value = value;
+      }
+    },
+  }
+```
+From the example above, it's important to say that JavaScript doesn't support method overloading, unless they are get and set methods.
+
+Now take a look at how we access this object:
+```js
+console.log(sequence.value);
+```
+You see? We don't need to specify the underline outside the object, JavaScript understands you!
+
+When trying to define a value to a private attribute that already have the get and set methods, it'll automatically call the set method to define it. When trying to read this value, it'll automatically call the get to read it.
+```js
+sequence.value = 1000; // call set method for altering
+console.log(sequence.value); // call get method for reading
+```
+Just follow the dance! 🥳
+
+---
