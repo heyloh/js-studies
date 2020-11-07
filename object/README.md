@@ -6,7 +6,7 @@
   <a href="#-object-creation-strategies">Object Creation Strategies</a> ● 
   <a href="#-constant-objects">Constant Objects</a> ●  
   <a href="#-getters-and-setters">Getters and Setters</a> ●  
-  <!-- <a href="#-important-object-functions">Important Object Functions</a> ●   -->
+  <a href="#-important-object-functions">Important Object Functions</a> ●  
 </p>
 
 
@@ -252,5 +252,64 @@ console.log(sequence.value); // call get method for reading
 ```
 Just follow the dance! 🥳
 
-<!-- ---
-# Important Object Functions -->
+---
+# ❗ Important Object Functions
+
+First let's create an object for testing those functions.
+```js
+const person = {
+  name: 'Lohana',
+  age: 19,
+  weight: 76,
+}
+```
+#### Now let's see those functions:
+
+<br>
+
+<strong>Object.keys</strong> is used to get the keys of the passed object.
+
+```js
+console.log(Object.keys(person));
+```
+
+<br>
+
+<strong>Object.values</strong> is used to get the values of the passed object.
+
+```js
+console.log(Object.values(person));
+```
+
+<br>
+
+<strong>Object.entries</strong> is used to get the entries of the passed object, an array with arrays of key and value pairs.
+
+```js
+console.log(Object.entries(person));
+```
+
+<br>
+
+<strong>Object.defineProperty</strong> is used to define properties on the passed object.
+
+```js
+Object.defineProperty(person, 'birthday', {
+  enumerable: true, // can be listed
+  writable: false, // can't be modified
+  value: '22/04/2001', // property value
+});
+
+console.log(person.birthday);
+```
+
+<br>
+
+<strong>Object.assign</strong> used to put inside a destiny object other objects attributes.
+
+```js
+const dest = { a: 1 };
+const o1 = { b: 2 };
+const o2 = { c: 3, a: 4 };
+const obj = Object.assign(dest, o1, o2);
+```

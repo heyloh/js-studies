@@ -23,7 +23,7 @@ I'm also challenging myself to write everything in english here, sorry if there 
 - [x] Constant Objects
 - [x] Literal Notation
 - [x] Getters/Setters
-- [ ] Important Object Functions 
+- [x] Important Object Functions 
 - [ ] Heritage
 - [ ] Avoiding Modifications 
 - [ ] JSON vs Object 
