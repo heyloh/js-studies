@@ -1,5 +1,4 @@
 <h3 align="center">Module Content</h3>
-
 <p align="center">
   <a href="#-introduction-to-oo">Introduction to OO</a> ●
   <a href="#-objects-revision">Objects Revision</a> ● 
@@ -7,8 +6,8 @@
   <a href="#-constant-objects">Constant Objects</a> ●  
   <a href="#-getters-and-setters">Getters and Setters</a> ●  
   <a href="#-important-object-functions">Important Object Functions</a> ●  
+  <a href="#-heritage">Heritage</a> ●  
 </p>
-
 
 ---
 # 🏁 Introduction to OO
@@ -21,7 +20,7 @@ The idea is to see the world based on objects and bring it in a simple way to th
 
 1. <strong>Abstraction</strong> - Take an object from the real world and translate it to your system, abstracting what's important for it and leaving out all the rest.
 2. <strong>Encapsulation</strong> - Have the implementation details hidden, show to who needs to use only a simple interface for them to interact with the objects. 
-3. <strong>Heritage</strong> (Prototype) - Receive attributes and characterictics of a Mother structure.
+3. <strong>Heritage</strong> (Prototype) - Receive attributes and characteristics of a Mother structure.
 4. <strong>Polymorphism</strong> - Have multiple shapes declaring on generic object a specialized instance. Like instantiating a Dog class in an Animal object.
 
 ---
@@ -169,7 +168,7 @@ Just use the Object.freeze method!
 Object.freeze(person);
 person.name = 'John'; // not gonna work!
 person.address = 'Rua de Xangô'; // nope!
-delete person.name; // nothing...Give up fren!
+delete person.name; // nothing...Give up friend!
 ```
 With that done, nobody can: alter an existing attribute, add a new attribute or delete any attributes. Now you've a constant object! 😁
 
@@ -223,11 +222,11 @@ We've already talk about the principles of Object-Oriented Programming, and one 
 
 When you alter a attribute directly you can't prevent inconsistent data being passed to those attributes. So, to prevent that, we use the Getters and Setters methods. Get is used for reading the attribute's values and Set, like the name suggests, to define or modify the attribute's value.
 
-In JavaScript, different from other Languages, we work directly with the attributes, but we also have a convension: When you have a variable starting with a underline(_) it's a message to developers, means it should only be accessed internally. It's not an obligation, but very recommended.
+In JavaScript, different from other Languages, we work directly with the attributes, but we also have a convention: When you have a variable starting with a underline(_) it's a message to developers, means it should only be accessed internally. It's not an obligation, but very recommended.
 
 ```js
   const sequence = { 
-    _value: 1, // convension
+    _value: 1, // convention
     /* Get, like said before, is used to read, the pros of using this method is be allowed to make a validation */
     get value() { return this_value++ },
     set value(value) {
@@ -312,4 +311,24 @@ const dest = { a: 1 };
 const o1 = { b: 2 };
 const o2 = { c: 3, a: 4 };
 const obj = Object.assign(dest, o1, o2);
+```
+
+---
+# 👩‍👧 Heritage
+
+Heritage is the capability of OO that makes a child object receives attributes and behaviors of its mother object, avoiding the need of copying those attributes and behaviors all the time. So heritage create mechanisms for reutilization of code.
+
+If you try to access an attribute in the child object and it doesn't have it, then it'll look for it in the mother object and so on. If mother doesn't have, it'll look for it in the grandmother object.
+
+```js
+// prototype chain
+Object.prototype.attr0 = 'D';
+const grandma = { attr1: 'A' };
+const mother = {__proto__:grandma, attr2: 'B' };
+const child = { __proto__:mother, attr3: 'C'};
+
+console.log(child.attr3); // logs child's attr3
+console.log(child.attr2); // logs mother's attr2
+console.log(child.attr1); // logs grandma's attr1
+console.log(child.attr0); // logs prototype's attr0
 ```
